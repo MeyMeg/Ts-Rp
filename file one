@@ -1,1 +1,11 @@
-(hello) 
+# Certifique-se de estar na branch desejada
+git checkout file one
+
+# Loop para criar 5 commits
+for i in 1 2 3 4 5
+do
+  echo "Linha $i" >> exemplo.txt     # adiciona ou altera o arquivo
+  git add exemplo.txt               # prepara para commit
+  git commit -m "Commit automático número $i"
+done
+
