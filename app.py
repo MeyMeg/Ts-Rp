@@ -13,4 +13,7 @@ def divide(a, b):
     return a / b
 
 def saudacao(nome):
-    return f"Olá, {nominho2}! Bem-vindo(a) à disciplina."
+ feature/testes/som2
+    return f"Olá, {nominho}! Bem-vindo(a) à disciplina.
+   
+main
