@@ -21,8 +21,5 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Instalar dependências
-        run: npm install
-
       - name: Rodar testes
         run: echo "✅ Testes passaram com sucesso!"
