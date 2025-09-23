@@ -1,10 +1,9 @@
-name: Alertas Discord
+name: Enviar alerta para o Discord
 
 on:
   push:
     branches:
-      - main  
-
+      - main
 jobs:
   enviar-alerta:
     runs-on: ubuntu-latest
@@ -12,8 +11,14 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v3
 
-      - name: Enviar alerta para Discord
-        uses: Ilshidur/action-discord@v2
+      - name: Enviar alerta para o Discord
+        uses: Ilshidur/action-discord@v0.4.0
         with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
-          message: "🚀 Novo commit no branch main! Autor: ${{ github.actor }} - Mensagem: ${{ github.event.head_commit.message }}"
+          args: |
+            🚀 Novo commit no branch main!
+            - Autor: ${{ github.actor }}
+            - Mensagem: ${{ github.event.head_commit.message }}
+            - Commit: ${{ github.sha }}
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+
