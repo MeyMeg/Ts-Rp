@@ -15,7 +15,7 @@ jobs:
 
   
       - name: Enviar alerta para Discord
-        uses: Ilshidur/action-discord@v2
+        uses: Ilshidur/action-discord@v1
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           message: |
