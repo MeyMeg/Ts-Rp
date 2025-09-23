@@ -3,7 +3,7 @@ name: Alertas Discord
 on:
   push:
     branches:
-      - main  # ou qualquer branch que você queira monitorar
+      - main  
 
 jobs:
   enviar-alerta:
